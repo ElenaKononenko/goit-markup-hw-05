@@ -24,6 +24,7 @@ html {
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --footer-link-bg-color: rgba(255, 255, 255, 0.1);
   --svg-color: #afb1b8;
+  --hover-color-blue:rgba(33, 150, 243, 0.9);
 }
 
 /* Остальной код */
@@ -166,9 +167,21 @@ body {
   color: var(--accent-color);
 }
 .site-nav .link.current {
+  position: relative;
   color: var(--accent-color);
 }
-/* add-header */
+.site-nav .link.current::after{
+  position: absolute;
+  content: "";
+  display:block; 
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  
+  background-color:var(--accent-color) ;
+  border-radius: 2px;
+}
+
 
 .add-header {
   display: flex;
@@ -422,21 +435,25 @@ address .link:not(:last-child) {
 
 /* work  */
 .work .title {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
+  width: 100%;
   height: 70px;
+  margin: 0;
   
-  background: rgba(47, 48, 58, 0.8);
-  color: var(--primary-white-color);
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
-
   text-transform: uppercase;
 
-  margin: 0;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
 }
+
 .work.list {
   display: flex;
   /* justify-content: space-between; */
@@ -444,6 +461,7 @@ address .link:not(:last-child) {
 
 .work .item {
   width: calc((100% - 60px) / 3);
+  position: relative;
 }
 
 .work .item:not(:last-child) {
@@ -617,32 +635,73 @@ address .link:not(:last-child) {
 }
 .grid-item{
   width: calc((100% - 60px) / 3);
-  border: 1px solid #EEEEEE;
+  /* border: 1px solid #EEEEEE; */
 }
-.grid-item:hover{
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .grid-item:not(:nth-child(3n + 3)) {
   margin-right: 30px;
 }
 .grid-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
+.card-hover{
+  position: relative;
+}
+.card-hover::before{
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--hover-color-blue);
+  width:100%;
+  height:100%;
+  opacity: 0;
+}
+.hover-text{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 100%;
+padding-left: 24px;
+padding-right: 24px;
+padding-top: 63px;
+padding-bottom: 63px;
+margin: 0;
+opacity: 0;
 
+font-size: 18px;
+line-height: 1.56;
+color: var(--primary-white-color)
+}
+.projects-link:hover .hover-text,
+.projects-link:focus .hover-text {
+  opacity: 1;
+}
+.projects-link:hover .card-hover::before,
+.projects-link:focus .card-hover::before {
+  opacity: 0.9;
+}
+.picture.projects-img {
+ width: 100%;
+}
 .projects-link {
   color: inherit;
   text-decoration: none;
+  display: block;
+ 
 }
-
+.projects-link:hover,
+.projects-link:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .projects .text {
   padding: 20px 24px;
+  border-left: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
 }
 
-/* не ховерится картинка */
-/* .projects-img:hover,
-.projects-img:focus {
-  color: var(--accent-color);
-} */
+
 
 .projects-title {
   margin-top: 0;

@@ -120,6 +120,8 @@ body {
   font-size: 26px;
   line-height: 1.2;
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo:hover,
 .logo:focus {
@@ -168,6 +170,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -220,6 +224,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .add-header .link:hover,
@@ -306,9 +312,11 @@ address .link:not(:last-child) {
 
   width: 44px;
   height: 44px;
-border-radius: 50%;
+ border-radius: 50%;
   fill: var(--primary-white-color);
   background-color: var(--footer-link-bg-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -533,6 +541,8 @@ border-radius: 50%;
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team .link:hover,
 .team .link:focus {
@@ -593,6 +603,8 @@ border-radius: 50%;
   border: 1px solid var(--svg-color);
   border-radius: 4px;
   height: 90px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers .item + .item {
   margin-left: 30px;
@@ -635,6 +647,8 @@ border-radius: 50%;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio .filter:hover,
 .portfolio .filter:focus {
@@ -679,7 +693,7 @@ border-radius: 50%;
   /* opacity: 0; */
   transform: translateY(100%);
 }
-.hover-text{
+.hover-text {
 position: absolute;
 top: 0px;
 left: 0px;
@@ -715,10 +729,17 @@ color: var(--primary-white-color)
 .picture.projects-img {
  width: 100%;
 }
+.projects-link .card-hover::before,
+.projects-link .hover-text{
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .projects-link {
   color: inherit;
   text-decoration: none;
   display: block;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  
 }
 .projects-link:hover,

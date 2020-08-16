@@ -552,11 +552,7 @@ address .link:not(:last-child) {
 .team .link:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  /* transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+
 }
 .team .wrapper {
   padding-top: 30px;
@@ -706,7 +702,6 @@ address .link:not(:last-child) {
 position: absolute;
 top: 0px;
 left: 0px;
-transform: translateY(105%);
 width: 100%;
 height: 100%;
 padding: 64px 24px;
@@ -718,6 +713,7 @@ line-height: 1.56;
 color: var(--primary-white-color);
 background-color: var(--hover-color-blue);
 
+transform: translateY(100%);
 transition-property: translate(Y);
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -730,13 +726,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    */
-}
-.projects-link:hover .card-hover::before,
-.projects-link:focus .card-hover::before {
-  /* opacity: 1; */
-  transform: translateY(0%);
-  /* transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .picture.projects-img {
